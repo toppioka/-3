@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리 여행사</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e0f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00796b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .places {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .place {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      width: 150px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .place img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #products {
+      display: none;
+      margin-top: 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>우리 여행사에 오신 걸 환영합니다!</h1>
+</header>
+
+<div class="section">
+  <h2>🌍 인기 여행지</h2>
+  <div class="places">
+    <div class="place">
+      <img src="https://picsum.photos/id/1011/200/150" alt="제주도">
+      <p>제주도</p>
+    </div>
+    <div class="place">
+      <img src="https://picsum.photos/id/1015/200/150" alt="부산">
+      <p>부산</p>
+    </div>
+    <div class="place">
+      <img src="https://picsum.photos/id/1016/200/150" alt="서울">
+      <p>서울</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🧳 여행 상품</h2>
+  <button onclick="showProducts()">여행 상품 보기</button>
+  <div id="products">
+    <p>✈️ 제주 3박 4일 패키지</p>
+    <p>✈️ 서울 명소 투어</p>
+    <p>✈️ 부산 해운대 여행</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📞 연락처</h2>
+  <p>이메일: tour@happy.com</p>
+  <p>전화: 010-1234-5678</p>
+</div>
+
+<footer>
+  &copy; 2025 우리 여행사. All Rights Reserved.
+</footer>
+
+<script>
+  function showProducts() {
+    var box = document.getElementById("products");
+    if (box.style.display === "none") {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
